@@ -1,0 +1,91 @@
+<!doctype html>
+  <html>
+
+    <head>
+      <title>
+        phillip seymour hoffman-bulldog photo shuffle
+      </title>
+      <link type="text/css" rel="stylesheet" href="pic_shuffle.css">
+      <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    </head>
+
+      <nav>
+        <ul>
+          <li id="bdNavItem">
+            <a href="http://en.wikipedia.org/wiki/Bulldog">
+              Bulldogs
+            </a>
+          </li>
+          <li id="pshNavItem">
+            <a href="http://en.wikipedia.org/wiki/Philip_Seymour_Hoffman">
+              PSH
+            </a>
+            </li>
+          <li id="dNavItem">
+            <a href="http://en.wikipedia.org/wiki/Diabetes_mellitus">
+              Diabetes
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <header>
+
+        <h1> imgMxr </h1>
+        <h2> Start the madness </h2>
+        <button id="launch"> Do Not Press This Button </button>
+
+      </header>
+
+
+      <section>
+        <img class="pic" src="http://i.imgur.com/hCUUGeM.png">
+        <img class="pic" src="http://i.imgur.com/vs2twN5.jpg">
+        <img class="pic" src="http://i.imgur.com/Mm0Tn7B.jpg">
+        <img class="pic" src="http://i.imgur.com/XNDOCsI.jpg">
+        <img class="pic" src="http://i.imgur.com/8iiFXxv.jpg">
+        <img class="pic" src="http://i.imgur.com/n5rytj3.jpg">
+        <img class="pic" src="http://i.imgur.com/avN6SCw.jpg">
+        <img class="pic" src="http://i.imgur.com/sRbhzaW.jpg">
+        <img class="pic" src="http://i.imgur.com/nlAIEld.jpg">
+        <img class="pic" src="http://i.imgur.com/jx4Pqfk.jpg">
+        <img class="pic" src="http://i.imgur.com/T0obw9E.png">
+        <img class="pic" src="http://i.imgur.com/qTdmkNq.jpg">
+        <img class="pic" src="http://i.imgur.com/axoGIXM.jpg">
+        <img class="pic" src="http://i.imgur.com/rFIIHIj.jpg">
+        <img class="pic" src="http://i.imgur.com/EW1BNZe.jpg">
+        <img class="pic" src="http://i.imgur.com/qdSYy8I.jpg">
+        <img class="pic" src="http://i.imgur.com/yeiINbY.gif">
+        <img class="pic" src="http://i.imgur.com/YbpDF9G.jpg">
+        <img class="pic" src="http://i.imgur.com/MOzdJod.jpg">
+        <img class="pic" src="http://i.imgur.com/sM2QboV.jpg">
+        <img class="pic" src="http://i.imgur.com/e1Cnr1O.jpg">
+        <img class="pic" src="http://i.imgur.com/53WvhJq.jpg">
+        <img class="pic" src="http://i.imgur.com/WvxGqvL.jpg">
+        <img class="pic" src="http://i.imgur.com/kYmymKO.jpg">
+        <img class="pic" src="http://i.imgur.com/8EZ9BcF.jpg">
+      </section>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+      <script>
+
+        $('#launch').on('click', function() {
+          var mix = function(p) {
+            var rand, $rand;
+            rand = Math.floor(Math.random() * p--);
+            $('img:eq(' + p + ')').
+              after($('img:eq(' + rand + ')')).
+              insertBefore($('img:eq(' + rand + ')'))
+            if(p) {
+              setTimeout(mix, 125, p);
+            }
+          };
+
+          mix($('.pics').length);
+        });
+
+      </script
+
+  </body>
+</html>
