@@ -12,19 +12,13 @@
       <nav>
         <ul>
           <li id="bdNavItem">
-            <a href="http://en.wikipedia.org/wiki/Bulldog">
-              Bulldogs
-            </a>
+            Bulldogs
           </li>
           <li id="pshNavItem">
-            <a href="http://en.wikipedia.org/wiki/Philip_Seymour_Hoffman">
-              PSH
-            </a>
-            </li>
+            PSH
+          </li>
           <li id="dNavItem">
-            <a href="http://en.wikipedia.org/wiki/Diabetes_mellitus">
-              Diabetes
-            </a>
+            Diabetes
           </li>
         </ul>
       </nav>
@@ -69,12 +63,41 @@
 
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+
       <script>
+        $('#bdNavItem').hover(
+          function() {
+            $(this).html('<a href="http://en.wikipedia.org/wiki/Bulldog"> <img class="hoverPic" src="http://i.imgur.com/n1qQXVv.jpg"> </a>');
+          }, function() {
+            $(this).html('<li> Bulldogs </li>');
+          });
+
+        $('#pshNavItem').hover(
+          function() {
+            $(this).html('<a href="http://en.wikipedia.org/wiki/Philip_Seymour_Hoffman"> <img class="hoverPic" src="http://i.imgur.com/yNNN6Sh.png"> </a>');
+          }, function() {
+            $(this).html('<li> PSH </li>');
+          });
+
+        $('#dNavItem').hover(
+          function() {
+            $(this).html('<a href="http://en.wikipedia.org/wiki/Diabetes_mellitus"> <img class="hoverPic" src="http://i.imgur.com/0yp03bg.png"> </a>');
+          }, function() {
+            $(this).html('<li> Diabetes </li>');
+          });
+
+        $('button').hover(
+          function() {
+            $(this).toggleClass('doNotHover');
+          });
+
+
+
 
         $('#launch').on('click', function() {
           var mix = function(p) {
             var rand, $rand;
-            rand = Math.floor(Math.random() * p--);
+            rand = Math.floor(Math.random() * p++);
             $('img:eq(' + p + ')').
               after($('img:eq(' + rand + ')')).
               insertBefore($('img:eq(' + rand + ')'))
@@ -84,9 +107,11 @@
           };
 
           mix($('.pics').length);
+          mix($('.pics').length);
+          mix($('.pics').length);
         });
 
-      </script
+      </script>
 
   </body>
 
