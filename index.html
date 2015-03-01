@@ -104,9 +104,9 @@
           var mix = function(p) {
             var rand, $rand;
             rand = Math.floor(Math.random() * p++);
-            $('img.pic:eq(' + p + ')').
-              after($('img.pic:eq(' + rand + ')')).
-              insertBefore($('img:eq(' + rand + ')'))
+            $('section img:eq(' + p + ')').
+              after($('section img:eq(' + rand + ')')).
+              insertBefore($('section img:eq(' + rand + ')'))
             if(p) {
               setTimeout(mix, 125, p);
             }
