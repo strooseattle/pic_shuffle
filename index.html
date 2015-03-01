@@ -98,6 +98,9 @@
 
 
         $('#launch').on('click', function() {
+          $('nav').toggle('slow', function(){
+
+          });
           var mix = function(p) {
             var rand, $rand;
             rand = Math.floor(Math.random() * p++);
